@@ -13,7 +13,7 @@
     }
   },
   "implicitDependencies": {
-    ".azure/**": {}
+    ".azure/**": "*"
   },
   "targetDefaults": {
     "build": {
