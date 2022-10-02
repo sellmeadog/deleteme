@@ -11,7 +11,9 @@ export interface GreetingProps {
 export const Greeting: FC<GreetingProps> = ({ containerStyle, textStyle }) => {
   return (
     <View style={containerStyle}>
-      <Text style={textStyle}>Welcome to Nx Conf 👋</Text>
+      <Text accessibilityRole="header" style={textStyle}>
+        Welcome to Nx Conf 👋
+      </Text>
     </View>
   );
 };
