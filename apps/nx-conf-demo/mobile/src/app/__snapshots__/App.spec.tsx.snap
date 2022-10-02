@@ -1,0 +1,1305 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<RCTSafeAreaView>
+  <RCTScrollView
+    contentInsetAdjustmentBehavior="automatic"
+    style={
+      Object {
+        "backgroundColor": "#ffffff",
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "marginHorizontal": 12,
+            "marginVertical": 12,
+          }
+        }
+      >
+        <View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "fontSize": 48,
+                },
+                Object {
+                  "fontWeight": "500",
+                },
+              ]
+            }
+          >
+            Welcome to Nx Conf 👋
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "marginHorizontal": 12,
+            "marginVertical": 12,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#143055",
+              "borderRadius": 12,
+              "marginBottom": 24,
+              "padding": 36,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "flexDirection": "row",
+              }
+            }
+          >
+            <SvgMock
+              height={32}
+              stroke="hsla(162, 47%, 50%, 1)"
+              width={32}
+            />
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 24,
+                  },
+                  Object {
+                    "color": "#ffffff",
+                    "marginLeft": 12,
+                  },
+                ]
+              }
+            >
+              You're up and running
+            </Text>
+          </View>
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderRadius": 8,
+                "marginTop": 24,
+                "opacity": 1,
+                "paddingVertical": 16,
+                "width": "50%",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 18,
+                  },
+                  Object {
+                    "textAlign": "center",
+                  },
+                ]
+              }
+            >
+              What's next?
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "marginHorizontal": 12,
+            "marginVertical": 12,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "white",
+                "borderRadius": 24,
+                "marginBottom": 24,
+                "padding": 24,
+                "shadowColor": "black",
+                "shadowOffset": Object {
+                  "height": 4,
+                  "width": 1,
+                },
+                "shadowOpacity": 0.15,
+                "shadowRadius": 12,
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "marginBottom": 18,
+                },
+                Object {
+                  "fontSize": 24,
+                },
+              ]
+            }
+          >
+            Learning materials
+          </Text>
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+                "marginVertical": 12,
+                "opacity": 1,
+              }
+            }
+          >
+            <SvgMock
+              height={24}
+              stroke="#000000"
+              width={24}
+            />
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "marginLeft": 12,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 18,
+                    },
+                  ]
+                }
+              >
+                Documentation
+              </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 12,
+                    },
+                    Object {
+                      "color": "#6b7280",
+                    },
+                  ]
+                }
+              >
+                Everything is in there
+              </Text>
+            </View>
+            <SvgMock
+              height={18}
+              stroke="#000000"
+              width={18}
+            />
+          </View>
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+                "marginVertical": 12,
+                "opacity": 1,
+              }
+            }
+          >
+            <SvgMock
+              height={24}
+              stroke="#000000"
+              width={24}
+            />
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "marginLeft": 12,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 18,
+                    },
+                  ]
+                }
+              >
+                Blog
+              </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 12,
+                    },
+                    Object {
+                      "color": "#6b7280",
+                    },
+                  ]
+                }
+              >
+                Changelog, features & events
+              </Text>
+            </View>
+            <SvgMock
+              height={18}
+              stroke="#000000"
+              width={18}
+            />
+          </View>
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+                "marginVertical": 12,
+                "opacity": 1,
+              }
+            }
+          >
+            <SvgMock
+              fill="#000000"
+              height={24}
+              width={24}
+            />
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "marginLeft": 12,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 18,
+                    },
+                  ]
+                }
+              >
+                Youtube channel
+              </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 12,
+                    },
+                    Object {
+                      "color": "#6b7280",
+                    },
+                  ]
+                }
+              >
+                Nx Show, talks & tutorials
+              </Text>
+            </View>
+            <SvgMock
+              height={18}
+              stroke="#000000"
+              width={18}
+            />
+          </View>
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+                "marginVertical": 12,
+                "opacity": 1,
+              }
+            }
+          >
+            <SvgMock
+              height={24}
+              stroke="#000000"
+              width={24}
+            />
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "marginLeft": 12,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 18,
+                    },
+                  ]
+                }
+              >
+                Interactive tutorials
+              </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 12,
+                    },
+                    Object {
+                      "color": "#6b7280",
+                    },
+                  ]
+                }
+              >
+                Create an app, step by step
+              </Text>
+            </View>
+            <SvgMock
+              height={18}
+              stroke="#000000"
+              width={18}
+            />
+          </View>
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+                "marginVertical": 12,
+                "opacity": 1,
+              }
+            }
+          >
+            <SvgMock
+              height={24}
+              stroke="#000000"
+              width={24}
+            />
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "marginLeft": 12,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 18,
+                    },
+                  ]
+                }
+              >
+                Video courses
+              </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 12,
+                    },
+                    Object {
+                      "color": "#6b7280",
+                    },
+                  ]
+                }
+              >
+                Nx custom courses
+              </Text>
+            </View>
+            <SvgMock
+              height={18}
+              stroke="#000000"
+              width={18}
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "marginHorizontal": 12,
+            "marginVertical": 12,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "flexDirection": "row",
+                },
+                Object {
+                  "backgroundColor": "white",
+                  "borderRadius": 24,
+                  "marginBottom": 24,
+                  "padding": 24,
+                  "shadowColor": "black",
+                  "shadowOffset": Object {
+                    "height": 4,
+                    "width": 1,
+                  },
+                  "shadowOpacity": 0.15,
+                  "shadowRadius": 12,
+                },
+              ]
+            }
+          >
+            <SvgMock
+              fill="rgba(0, 122, 204, 1)"
+              height={48}
+              width={48}
+            />
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "marginLeft": 12,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 18,
+                    },
+                    Object {
+                      "fontWeight": "500",
+                    },
+                    Object {
+                      "marginBottom": 6,
+                    },
+                  ]
+                }
+              >
+                Install Nx Console
+              </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 14,
+                    },
+                    Object {
+                      "fontWeight": "300",
+                    },
+                  ]
+                }
+              >
+                Plugin for VSCode
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "marginHorizontal": 12,
+            "marginVertical": 12,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderRadius": 24,
+                "marginBottom": 24,
+                "padding": 24,
+                "shadowColor": "black",
+                "shadowOffset": Object {
+                  "height": 4,
+                  "width": 1,
+                },
+                "shadowOpacity": 0.15,
+                "shadowRadius": 12,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "flexDirection": "row",
+                  },
+                  Object {
+                    "marginBottom": 18,
+                  },
+                ]
+              }
+            >
+              <SvgMock
+                height={48}
+                width={48}
+              />
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "marginLeft": 12,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "fontSize": 18,
+                      },
+                      Object {
+                        "fontWeight": "500",
+                      },
+                      Object {
+                        "marginBottom": 6,
+                      },
+                    ]
+                  }
+                >
+                  Nx Cloud
+                </Text>
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "fontSize": 14,
+                      },
+                      Object {
+                        "fontWeight": "300",
+                      },
+                    ]
+                  }
+                >
+                  Enable faster CI & better DX
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "backgroundColor": "rgba(55, 65, 81, 1)",
+                  "borderRadius": 4,
+                  "marginVertical": 12,
+                  "padding": 12,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Courier New",
+                      "marginVertical": 4,
+                    },
+                  ]
+                }
+              >
+                nx connect-to-nx-cloud
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "marginHorizontal": 12,
+            "marginVertical": 12,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "flexDirection": "row",
+                },
+                Object {
+                  "backgroundColor": "white",
+                  "borderRadius": 24,
+                  "marginBottom": 24,
+                  "padding": 24,
+                  "shadowColor": "black",
+                  "shadowOffset": Object {
+                    "height": 4,
+                    "width": 1,
+                  },
+                  "shadowOpacity": 0.15,
+                  "shadowRadius": 12,
+                },
+              ]
+            }
+          >
+            <SvgMock
+              fill="#000000"
+              height={48}
+              width={48}
+            />
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "marginLeft": 12,
+                }
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 18,
+                    },
+                    Object {
+                      "fontWeight": "500",
+                    },
+                    Object {
+                      "marginBottom": 6,
+                    },
+                  ]
+                }
+              >
+                Nx is open source
+              </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 14,
+                    },
+                    Object {
+                      "fontWeight": "300",
+                    },
+                  ]
+                }
+              >
+                Love Nx? Give us a star!
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Object {
+            "marginHorizontal": 12,
+            "marginVertical": 12,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderRadius": 24,
+              "marginBottom": 24,
+              "padding": 24,
+              "shadowColor": "black",
+              "shadowOffset": Object {
+                "height": 4,
+                "width": 1,
+              },
+              "shadowOpacity": 0.15,
+              "shadowRadius": 12,
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "fontSize": 24,
+                },
+                Object {
+                  "marginBottom": 18,
+                },
+              ]
+            }
+          >
+            Next steps
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "fontSize": 16,
+                },
+                Object {
+                  "fontWeight": "300",
+                },
+                Object {
+                  "marginBottom": 18,
+                },
+              ]
+            }
+          >
+            Here are some things you can do with Nx:
+          </Text>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+              }
+            }
+          >
+            <SvgMock
+              height={24}
+              stroke="#000000"
+              width={24}
+            />
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "marginLeft": 12,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "fontSize": 16,
+                  }
+                }
+              >
+                Add UI library
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "rgba(55, 65, 81, 1)",
+                  "borderRadius": 4,
+                  "marginVertical": 12,
+                  "padding": 12,
+                },
+                Object {
+                  "marginBottom": 24,
+                },
+              ]
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                  },
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Courier New",
+                    "marginVertical": 4,
+                  },
+                  Object {
+                    "color": "#cccccc",
+                  },
+                ]
+              }
+            >
+              # Generate UI lib
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                  },
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Courier New",
+                    "marginVertical": 4,
+                  },
+                  Object {
+                    "marginBottom": 18,
+                  },
+                ]
+              }
+            >
+              nx g @nrwl/react-native:lib ui
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                  },
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Courier New",
+                    "marginVertical": 4,
+                  },
+                  Object {
+                    "color": "#cccccc",
+                  },
+                ]
+              }
+            >
+              # Add a component
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                  },
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Courier New",
+                    "marginVertical": 4,
+                  },
+                ]
+              }
+            >
+              nx g \\
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                  },
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Courier New",
+                    "marginVertical": 4,
+                  },
+                ]
+              }
+            >
+              @nrwl/react-native:component \\
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                  },
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Courier New",
+                    "marginVertical": 4,
+                  },
+                ]
+              }
+            >
+              button --project ui
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+              }
+            }
+          >
+            <SvgMock
+              height={24}
+              stroke="#000000"
+              width={24}
+            />
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "marginLeft": 12,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "fontSize": 16,
+                  }
+                }
+              >
+                View interactive project graph
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "rgba(55, 65, 81, 1)",
+                  "borderRadius": 4,
+                  "marginVertical": 12,
+                  "padding": 12,
+                },
+                Object {
+                  "marginBottom": 24,
+                },
+              ]
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                  },
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Courier New",
+                    "marginVertical": 4,
+                  },
+                ]
+              }
+            >
+              nx graph
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+              }
+            }
+          >
+            <SvgMock
+              height={24}
+              stroke="#000000"
+              width={24}
+            />
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "marginLeft": 12,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "fontSize": 16,
+                  }
+                }
+              >
+                Run affected commands
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgba(55, 65, 81, 1)",
+                "borderRadius": 4,
+                "marginVertical": 12,
+                "padding": 12,
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                  },
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Courier New",
+                    "marginVertical": 4,
+                  },
+                  Object {
+                    "color": "#cccccc",
+                  },
+                ]
+              }
+            >
+              # See what's affected by changes
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                  },
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Courier New",
+                    "marginVertical": 4,
+                  },
+                  Object {
+                    "marginBottom": 18,
+                  },
+                ]
+              }
+            >
+              nx affected:graph
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                  },
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Courier New",
+                    "marginVertical": 4,
+                  },
+                  Object {
+                    "color": "#cccccc",
+                  },
+                ]
+              }
+            >
+              # run tests for current changes
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                  },
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Courier New",
+                    "marginVertical": 4,
+                  },
+                  Object {
+                    "marginBottom": 18,
+                  },
+                ]
+              }
+            >
+              nx affected:text
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                  },
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Courier New",
+                    "marginVertical": 4,
+                  },
+                  Object {
+                    "color": "#cccccc",
+                  },
+                ]
+              }
+            >
+              # run e2e tests for current
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                  },
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Courier New",
+                    "marginVertical": 4,
+                  },
+                  Object {
+                    "color": "#cccccc",
+                  },
+                ]
+              }
+            >
+              # changes
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 14,
+                  },
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Courier New",
+                    "marginVertical": 4,
+                  },
+                ]
+              }
+            >
+              nx affected:e2e
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+              },
+              Object {
+                "justifyContent": "center",
+                "marginTop": 12,
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#6b7280",
+              }
+            }
+          >
+            Carefully crafted with 
+          </Text>
+          <SvgMock
+            fill="rgba(252, 165, 165, 1)"
+            height={24}
+            width={24}
+          />
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</RCTSafeAreaView>
+`;

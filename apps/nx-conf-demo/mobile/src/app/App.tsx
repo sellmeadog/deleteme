@@ -23,6 +23,7 @@ import NxCloud from './icons/nx-cloud.svg';
 import GitHub from './icons/github.svg';
 import Terminal from './icons/terminal.svg';
 import Heart from './icons/heart.svg';
+import { Greeting } from '@deleteme/nx-conf-demo-ui-shared';
 
 export const App = () => {
   const [whatsNextYCoord, setWhatsNextYCoord] = useState<number>(0);
@@ -40,10 +41,7 @@ export const App = () => {
           style={styles.scrollView}
         >
           <View style={styles.section}>
-            <Text style={styles.textLg}>Hello there,</Text>
-            <Text style={[styles.textXL, styles.appTitleText]} testID="heading">
-              Welcome NxConfDemoMobile 👋
-            </Text>
+            <Greeting textStyle={[styles.textXL, styles.appTitleText]} />
           </View>
           <View style={styles.section}>
             <View style={styles.hero}>
@@ -440,7 +438,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   appTitleText: {
-    paddingTop: 12,
     fontWeight: '500',
   },
   hero: {

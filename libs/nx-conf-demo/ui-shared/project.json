@@ -1,0 +1,43 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "name": "nx-conf-demo-ui-shared",
+  "sourceRoot": "libs/nx-conf-demo/ui-shared/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/nx-conf-demo/ui-shared",
+        "tsConfig": "libs/nx-conf-demo/ui-shared/tsconfig.lib.json",
+        "project": "libs/nx-conf-demo/ui-shared/package.json",
+        "entryFile": "libs/nx-conf-demo/ui-shared/src/index.ts",
+        "external": ["react/jsx-runtime", "react-native"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "assets": [
+          {
+            "glob": "libs/nx-conf-demo/ui-shared/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/nx-conf-demo/ui-shared/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/nx-conf-demo/ui-shared"],
+      "options": {
+        "jestConfig": "libs/nx-conf-demo/ui-shared/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
