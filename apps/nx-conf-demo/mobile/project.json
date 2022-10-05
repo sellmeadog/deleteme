@@ -78,6 +78,12 @@
         "jestConfig": "apps/nx-conf-demo/mobile/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "tag": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo '##vso[build.addbuildtag]nx-conf-demo-mobile'"
+      }
     }
   },
   "tags": []
