@@ -7,8 +7,12 @@
     "build": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "xcodebuild -workspace NxConfDemoMobile.xcworkspace -configuration Debug -scheme NxConfDemoMobile -destination id=35D28D7D-6C16-4C34-BE78-B90CDAB25253",
-        "cwd": "apps/nx-conf-demo/mobile/ios"
+        "commands": [
+          "npx pod-install",
+          "xcodebuild -workspace NxConfDemoMobile.xcworkspace -configuration Debug -scheme NxConfDemoMobile -destination id=35D28D7D-6C16-4C34-BE78-B90CDAB25253"
+        ],
+        "cwd": "apps/nx-conf-demo/mobile/ios",
+        "parallel": false
       }
     },
     "start": {
