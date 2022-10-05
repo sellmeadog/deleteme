@@ -9,7 +9,7 @@
       "options": {
         "commands": [
           "npx pod-install",
-          "xcodebuild -workspace NxConfDemoMobile.xcworkspace -configuration Debug -scheme NxConfDemoMobile -destination id=35D28D7D-6C16-4C34-BE78-B90CDAB25253"
+          "xcodebuild build -workspace NxConfDemoMobile.xcworkspace -configuration Debug -scheme NxConfDemoMobile CODE_SIGNING_ALLOWED=NO"
         ],
         "cwd": "apps/nx-conf-demo/mobile/ios",
         "parallel": false
