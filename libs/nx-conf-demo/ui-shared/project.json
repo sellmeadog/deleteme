@@ -39,7 +39,7 @@
         "passWithNoTests": true
       }
     },
-    "tag": {
+    "add-build-tag": {
       "executor": "nx:run-commands",
       "options": {
         "command": "echo '##vso[build.addbuildtag]nx-conf-demo-ui-shared'"
