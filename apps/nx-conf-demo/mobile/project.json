@@ -8,8 +8,8 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          "npx pod-install",
-          "xcodebuild build -workspace NxConfDemoMobile.xcworkspace -configuration Release -scheme NxConfDemoMobile CODE_SIGNING_ALLOWED=NO"
+          "pod-install",
+          "xcodebuild build clean -workspace NxConfDemoMobile.xcworkspace -configuration Release -scheme NxConfDemoMobile CODE_SIGNING_ALLOWED=NO"
         ],
         "cwd": "apps/nx-conf-demo/mobile/ios",
         "parallel": false
