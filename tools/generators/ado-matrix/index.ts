@@ -23,10 +23,11 @@ export default async function (tree: Tree) {
     }, {});
 
   const matrixJson = JSON.stringify(matrix);
+  const command = `"##vso[task.setvariable variable=matrix;isOutput=true]${matrixJson}"`;
+  // const echoCommand = `echo ${command}`;
 
-  execSync(
-    `echo "##vso[task.setvariable variable=matrix;isOutput=true]${matrixJson}"`
-  );
+  console.log(command);
+  // execSync(echoCommand);
 }
 
 function normalizeOptions(): NormalizedGeneratorSchema {
