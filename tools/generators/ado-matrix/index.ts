@@ -1,5 +1,4 @@
 import { Tree, readProjectConfiguration } from '@nrwl/devkit';
-import { execSync } from 'child_process';
 import { readFileSync } from 'fs';
 
 interface NormalizedGeneratorSchema {
@@ -9,7 +8,7 @@ interface NormalizedGeneratorSchema {
 export default async function (tree: Tree) {
   const { projects } = normalizeOptions();
   const matrix = projects
-    .filter((name) => name.includes('-e2e'))
+    .filter((name) => !name.includes('-e2e'))
     .map((name) => readProjectConfiguration(tree, name))
     .reduce((acc, { name, root, sourceRoot, targets }) => {
       const macos = targets?.['run-ios'];
@@ -28,7 +27,6 @@ export default async function (tree: Tree) {
   const command = `echo '##vso[task.setvariable variable=matrix;isOutput=true]${json}'`;
 
   process.stdout.write(`${command}\n`);
-  execSync(command);
 }
 
 function normalizeOptions(): NormalizedGeneratorSchema {
