@@ -13,7 +13,8 @@
         ],
         "cwd": "apps/nx-conf-demo/mobile/ios",
         "parallel": false
-      }
+      },
+      "dependsOn": ["^ensure-symlink"]
     },
     "start": {
       "executor": "@nrwl/react-native:start",
