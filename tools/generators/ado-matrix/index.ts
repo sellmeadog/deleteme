@@ -1,4 +1,5 @@
 import { Tree, readProjectConfiguration } from '@nrwl/devkit';
+import { execSync } from 'child_process';
 import { readFileSync } from 'fs';
 
 interface NormalizedGeneratorSchema {
@@ -23,8 +24,8 @@ export default async function (tree: Tree) {
 
   const matrixJson = JSON.stringify(matrix);
 
-  process.stdout.write(
-    `##vso[task.setvariable variable=matrix;isOutput=true]${matrixJson}\n`
+  execSync(
+    `echo "##vso[task.setvariable variable=matrix;isOutput=true]${matrixJson}"`
   );
 }
 
