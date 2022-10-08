@@ -7,10 +7,7 @@
     "build": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": [
-          "pod-install",
-          "xcodebuild build clean -workspace NxConfDemoMobile.xcworkspace -configuration Release -scheme NxConfDemoMobile CODE_SIGNING_ALLOWED=NO"
-        ],
+        "commands": ["pod-install"],
         "cwd": "apps/nx-conf-demo/mobile/ios",
         "parallel": false
       },

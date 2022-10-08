@@ -16,6 +16,7 @@ export default async function (tree: Tree) {
       return {
         ...acc,
         [name!]: {
+          command: `npx nx run ${name}:build`,
           image: macos ? 'macos-latest' : 'ubuntu-latest',
           sourceRoot: macos ? `${root}/ios` : sourceRoot,
         },
@@ -23,11 +24,11 @@ export default async function (tree: Tree) {
     }, {});
 
   const matrixJson = JSON.stringify(matrix);
-  const command = `"##vso[task.setvariable variable=matrix;isOutput=true]${matrixJson}"`;
-  // const echoCommand = `echo ${command}`;
+  const command = `##vso[task.setvariable variable=matrix;isOutput=true]${matrixJson}`;
+  const echoCommand = `echo '${command}'`;
 
-  console.log(command);
-  // execSync(echoCommand);
+  // console.log(command);
+  execSync(echoCommand);
 }
 
 function normalizeOptions(): NormalizedGeneratorSchema {
