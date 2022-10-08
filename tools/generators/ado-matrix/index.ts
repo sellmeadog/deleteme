@@ -24,7 +24,7 @@ export default async function (tree: Tree) {
   const matrixJson = JSON.stringify(matrix);
 
   process.stdout.write(
-    `echo '##vso[task.setvariable variable=matrix;isOutput=true]${matrixJson}'\n`
+    `##vso[task.setvariable variable=matrix;isOutput=true]${matrixJson}\n`
   );
 }
 
