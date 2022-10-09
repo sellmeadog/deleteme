@@ -10,15 +10,23 @@ export default async function (tree: Tree) {
   const matrix = projects
     .filter((name) => !name.includes('-e2e'))
     .map((name) => readProjectConfiguration(tree, name))
-    .reduce((acc, { name, root, sourceRoot, targets }) => {
-      const macos = targets?.['run-ios'];
+    .reduce((acc, { name, root, targets }) => {
+      const bundleIosTarget = targets?.['bundle-ios'];
+      const exportTarget = targets?.['export'];
+      const target = bundleIosTarget
+        ? 'bundle-ios'
+        : exportTarget
+        ? 'export'
+        : 'build';
 
       return {
         ...acc,
         [name!]: {
-          command: `npx nx run ${name}:build`,
-          image: macos ? 'macos-latest' : 'ubuntu-latest',
-          sourceRoot: macos ? `${root}/ios` : sourceRoot,
+          buildCommand: `npx nx run ${name}:${target}`,
+          buildTagCommand: `npx nx run ${name}:add-build-tag`,
+          image: bundleIosTarget ? 'macos-latest' : 'ubuntu-latest',
+          name,
+          root,
         },
       };
     }, {});

@@ -4,14 +4,14 @@
   "sourceRoot": "apps/nx-conf-demo/mobile/src",
   "projectType": "application",
   "targets": {
-    "build": {
+    "archive": {
       "executor": "nx:run-commands",
       "options": {
         "commands": ["pod-install"],
         "cwd": "apps/nx-conf-demo/mobile/ios",
         "parallel": false
       },
-      "dependsOn": ["^ensure-symlink"]
+      "dependsOn": ["ensure-symlink", "sync-deps"]
     },
     "start": {
       "executor": "@nrwl/react-native:start",
