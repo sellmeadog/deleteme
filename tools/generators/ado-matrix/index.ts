@@ -22,6 +22,7 @@ export default async function (tree: Tree) {
       return {
         ...acc,
         [name!]: {
+          buildArtifactName: name?.replace(/-/gi, '_'),
           buildCommand: `npx nx run ${name}:${target}`,
           buildTagCommand: `npx nx run ${name}:add-build-tag`,
           image: bundleIosTarget ? 'macos-latest' : 'ubuntu-latest',
