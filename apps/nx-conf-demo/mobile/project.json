@@ -4,6 +4,15 @@
   "sourceRoot": "apps/nx-conf-demo/mobile/src",
   "projectType": "application",
   "targets": {
+    "archive": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["pod-install"],
+        "cwd": "apps/nx-conf-demo/mobile/ios",
+        "parallel": false
+      },
+      "dependsOn": ["ensure-symlink", "sync-deps"]
+    },
     "start": {
       "executor": "@nrwl/react-native:start",
       "options": {
@@ -70,6 +79,12 @@
       "options": {
         "jestConfig": "apps/nx-conf-demo/mobile/jest.config.ts",
         "passWithNoTests": true
+      }
+    },
+    "add-build-tag": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo '##vso[build.addbuildtag]nx-conf-demo-mobile'"
       }
     }
   },

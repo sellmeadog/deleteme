@@ -57,6 +57,12 @@
       "options": {
         "lintFilePatterns": ["apps/nx-conf-demo/web/**/*.{ts,tsx,js,jsx}"]
       }
+    },
+    "add-build-tag": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo '##vso[build.addbuildtag]nx-conf-demo-web'"
+      }
     }
   },
   "tags": []

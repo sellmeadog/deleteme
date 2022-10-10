@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "ado-matrix",
+  "type": "object",
+  "properties": {
+    "projects": {
+      "type": "string",
+      "description": "The list of projects to generate a matrix for",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    }
+  },
+  "required": []
+}
