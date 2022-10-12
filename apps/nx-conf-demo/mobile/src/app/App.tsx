@@ -351,6 +351,7 @@ export const App = () => {
     </>
   );
 };
+
 const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: '#ffffff',

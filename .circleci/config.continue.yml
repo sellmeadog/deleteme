@@ -1,0 +1,43 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@5.0.3
+
+parameters:
+  nx-conf-demo-mobile:
+    type: boolean
+    default: false
+  nx-conf-demo-web:
+    type: boolean
+    default: false
+  nx-conf-demo-ui-shared:
+    type: boolean
+    default: false
+
+jobs:
+  ci--setup:
+    docker:
+      - image: cimg/node:lts-browsers
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn
+      - persist_to_workspace:
+          root: '.'
+          paths: '.'
+
+workflows:
+  nx-conf-demo-mobile:
+    when: << pipeline.parameters.nx-conf-demo-mobile >>
+    jobs:
+      - ci--setup
+
+  nx-conf-demo-web:
+    when: << pipeline.parameters.nx-conf-demo-web >>
+    jobs:
+      - ci--setup
+
+  nx-conf-demo-ui-shared:
+    when: << pipeline.parameters.nx-conf-demo-ui-shared >>
+    jobs:
+      - ci--setup

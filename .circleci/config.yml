@@ -1,0 +1,48 @@
+version: 2.1
+
+orbs:
+  continuation: circleci/continuation@0.3.1
+  node: circleci/node@5.0.3
+  nx: nrwl/nx@1.6.0
+
+jobs:
+  nx-checks:
+    docker:
+      - image: cimg/node:lts-browsers
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn
+      - nx/set-shas
+      - run:
+          name: Run affected:build
+          command: yarn nx affected --target=build --base=$NX_BASE --parallel
+      - run:
+          name: Run affected:lint
+          command: yarn nx affected --target=build --base=$NX_BASE --parallel
+      - run:
+          name: Run affected:test
+          command: yarn nx affected --target=test --base=$NX_BASE --parallel
+
+  nx-setup:
+    docker:
+      - image: cimg/node:lts-browsers
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn
+      - nx/set-shas
+      - run:
+          name: Run continuation-parameters generator
+          command: npx nx workspace-generator continuation-parameters --base=$NX_BASE --head=$NX_HEAD
+      - continuation/continue:
+          configuration_path: .circleci/config.continue.yml
+          parameters: tmp/continue-parameters.json
+
+workflows:
+  main:
+    jobs:
+      - nx-setup:
+          filters:
+            branches:
+              only: circleci
