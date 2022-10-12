@@ -22,10 +22,9 @@ export default async function (tree: Tree) {
     //   {}
     // );
 
-    const parameters = projects.reduce(
-      (params, project) => ({ ...params, [project]: true }),
-      {}
-    );
+    const parameters = projects
+      .filter((project) => !project.includes('-e2e'))
+      .reduce((params, project) => ({ ...params, [project]: true }), {});
 
     writeJsonFile(
       joinPathFragments('tmp', 'continue-parameters.json'),
