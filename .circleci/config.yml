@@ -35,8 +35,8 @@ jobs:
           pkg-manager: yarn
       - nx/set-shas
       - run:
-          name: Run continuation-parameters generator
-          command: npx nx workspace-generator continuation-parameters --base=$NX_BASE --head=$NX_HEAD
+          name: Run continue-parameters generator
+          command: npx nx print-affected --base=$NX_BASE --head=$NX_HEAD --select=projects | npx nx workspace-generator continue-parameters
       - continuation/continue:
           configuration_path: .circleci/config.continue.yml
           parameters: tmp/continue-parameters.json
