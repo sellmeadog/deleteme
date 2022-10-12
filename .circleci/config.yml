@@ -1,5 +1,7 @@
 version: 2.1
 
+setup: true
+
 orbs:
   continuation: circleci/continuation@0.3.1
   node: circleci/node@5.0.3
