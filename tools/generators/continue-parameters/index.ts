@@ -9,16 +9,21 @@ export default async function (tree: Tree) {
   const { projects } = normalizeOptions();
 
   if (projects?.length) {
-    const matrix = buildMatrix(projects, tree);
-    const parameters = Object.entries(matrix).reduce(
-      (params, [key, value]) =>
-        Object.entries(value).reduce(
-          (params_, [subKey, subValue]) => ({
-            ...params_,
-            [formatKey(key, subKey)]: subValue,
-          }),
-          { ...params, [key]: true }
-        ),
+    // const matrix = buildMatrix(projects, tree);
+    // const parameters = Object.entries(matrix).reduce(
+    //   (params, [key, value]) =>
+    //     Object.entries(value).reduce(
+    //       (params_, [subKey, subValue]) => ({
+    //         ...params_,
+    //         [formatKey(key, subKey)]: subValue,
+    //       }),
+    //       { ...params, [key]: true }
+    //     ),
+    //   {}
+    // );
+
+    const parameters = projects.reduce(
+      (params, project) => ({ ...params, [project]: true }),
       {}
     );
 
