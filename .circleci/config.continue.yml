@@ -24,8 +24,8 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
       - persist_to_workspace:
-          root: .
-          paths: .
+          root: '.'
+          paths: '.'
 
   ci--build-ios:
     executor:
@@ -33,7 +33,7 @@ jobs:
       xcode_version: 14.0.1
     steps:
       - attach_workspace:
-          at: .
+          at: '.'
       - run:
           name: ensure-symlink
           command: yarn nx run nx-conf-demo-mobile:ensure-symlink
