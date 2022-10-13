@@ -24,7 +24,7 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
       - persist_to_workspace:
-          root: /ci
+          root: .
           paths: .
 
   ci--build-ios:
@@ -32,7 +32,7 @@ jobs:
       - image: cimg/node:lts-browsers
     steps:
       - attach_workspace:
-          at: /ci
+          at: .
       - run:
           name: ensure-symlink
           command: yarn nx run nx-conf-demo-mobile:ensure-symlink
@@ -47,7 +47,9 @@ workflows:
     when: << pipeline.parameters.nx-conf-demo-mobile >>
     jobs:
       - ci--setup
-      - ci--build-ios
+      - ci--build-ios:
+          requires:
+            - ci--setup
 
   nx-conf-demo-web:
     when: << pipeline.parameters.nx-conf-demo-web >>
