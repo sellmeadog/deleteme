@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   node: circleci/node@5.0.3
+  rn: react-native-community/react-native@7.1.0
 
 parameters:
   nx-conf-demo-mobile:
@@ -23,14 +24,30 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
       - persist_to_workspace:
-          root: '.'
-          paths: '.'
+          root: .
+          paths: .
+
+  ci--build-ios:
+    executor:
+      name: rn/macos
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: ensure-symlink
+          command: yarn nx run nx-conf-demo-mobile:ensure-symlink
+      - rn/pod_install:
+          pod_install_directory: apps/nx-conf-demo/mobile/ios
+      - rn/ios_build:
+          project_path: apps/nx-conf-demo/mobile/ios/NxConfDemoMobile.xcodeproj
+          schema: NxConfDemoMobile
 
 workflows:
   nx-conf-demo-mobile:
     when: << pipeline.parameters.nx-conf-demo-mobile >>
     jobs:
       - ci--setup
+      - ci--build-ios
 
   nx-conf-demo-web:
     when: << pipeline.parameters.nx-conf-demo-web >>
