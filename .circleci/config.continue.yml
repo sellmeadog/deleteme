@@ -40,7 +40,7 @@ jobs:
           pod_install_directory: apps/nx-conf-demo/mobile/ios
       - rn/ios_build:
           project_path: apps/nx-conf-demo/mobile/ios/NxConfDemoMobile.xcodeproj
-          schema: NxConfDemoMobile
+          scheme: NxConfDemoMobile
 
 workflows:
   nx-conf-demo-mobile:
