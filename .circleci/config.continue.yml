@@ -28,20 +28,19 @@ jobs:
           paths: '.'
 
   ci--build-ios:
-    executor:
-      name: rn/macos
-      xcode_version: 14.0.1
+    docker:
+      - image: cimg/node:lts-browsers
     steps:
       - attach_workspace:
           at: '.'
       - run:
           name: ensure-symlink
           command: yarn nx run nx-conf-demo-mobile:ensure-symlink
-      - rn/pod_install:
-          pod_install_directory: apps/nx-conf-demo/mobile/ios
-      - rn/ios_build:
-          project_path: apps/nx-conf-demo/mobile/ios/NxConfDemoMobile.xcodeproj
-          scheme: NxConfDemoMobile
+      # - rn/pod_install:
+      #     pod_install_directory: apps/nx-conf-demo/mobile/ios
+      # - rn/ios_build:
+      #     project_path: apps/nx-conf-demo/mobile/ios/NxConfDemoMobile.xcodeproj
+      #     scheme: NxConfDemoMobile
 
 workflows:
   nx-conf-demo-mobile:
