@@ -30,6 +30,7 @@ jobs:
   ci--build-ios:
     executor:
       name: rn/macos
+      xocde_version: 14.0.1
     steps:
       - attach_workspace:
           at: .
