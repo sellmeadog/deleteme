@@ -25,8 +25,7 @@ jobs:
           pkg-manager: yarn
       - persist_to_workspace:
           root: /ci
-          paths:
-            - /*
+          paths: .
 
   ci--build-ios:
     docker:
