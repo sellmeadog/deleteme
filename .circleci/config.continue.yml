@@ -24,15 +24,16 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
       - persist_to_workspace:
-          root: '.'
-          paths: '.'
+          root: /ci
+          paths:
+            - /*
 
   ci--build-ios:
     docker:
       - image: cimg/node:lts-browsers
     steps:
       - attach_workspace:
-          at: '.'
+          at: /ci
       - run:
           name: ensure-symlink
           command: yarn nx run nx-conf-demo-mobile:ensure-symlink
