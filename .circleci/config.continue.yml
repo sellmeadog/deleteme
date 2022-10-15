@@ -2,7 +2,6 @@ version: 2.1
 
 orbs:
   node: circleci/node@5.0.3
-  rn: react-native-community/react-native@7.1.0
 
 parameters:
   nx-conf-demo-mobile:
@@ -28,20 +27,18 @@ jobs:
           paths: .
 
   ci--build-ios:
-    executor:
-      name: rn/macos
-      xcode_version: 14.0.1
+    macos:
+      xcode: 14.0.1
     steps:
       - attach_workspace:
           at: .
       - run:
           name: ensure-symlink
-          command: yarn nx run nx-conf-demo-mobile:ensure-symlink
-      - rn/pod_install:
-          pod_install_directory: apps/nx-conf-demo/mobile/ios
-      - rn/ios_build:
-          project_path: apps/nx-conf-demo/mobile/ios/NxConfDemoMobile.xcodeproj
-          scheme: NxConfDemoMobile
+          command: |
+            yarn nx run nx-conf-demo-mobile:archive
+      - run:
+          name: xcode build
+          command: export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild -project apps/nx-conf-demo/mobile/ios/NxConfDemoMobile.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 14 Pro' -scheme NxConfDemoMobile -parallelizeTargets -configuration Debug -derivedDataPath ios/build  -UseModernBuildSystem=YES | xcpretty -k
 
 workflows:
   nx-conf-demo-mobile:
