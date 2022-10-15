@@ -38,7 +38,7 @@ jobs:
             yarn nx run nx-conf-demo-mobile:archive
       - run:
           name: xcode build
-          command: export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild -project apps/nx-conf-demo/mobile/ios/NxConfDemoMobile.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 14 Pro' -scheme NxConfDemoMobile -parallelizeTargets -configuration Debug -derivedDataPath ios/build  -UseModernBuildSystem=YES | xcpretty -k
+          command: export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild -project apps/nx-conf-demo/mobile/ios/NxConfDemoMobile.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 14 Pro' -scheme NxConfDemoMobile -parallelizeTargets -configuration Debug -derivedDataPath apps/nx-conf-demo/mobile/ios/build  -UseModernBuildSystem=YES | xcpretty -k
 
 workflows:
   nx-conf-demo-mobile:
