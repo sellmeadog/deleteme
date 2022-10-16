@@ -47,4 +47,4 @@ workflows:
       - nx-setup:
           filters:
             branches:
-              only: circleci
+              only: main
