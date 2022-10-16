@@ -18,13 +18,13 @@ jobs:
       - nx/set-shas
       - run:
           name: Run affected:build
-          command: yarn nx affected --target=build --base=$NX_BASE --parallel
+          command: yarn nx affected --target=build --base=HEAD~1 --parallel
       - run:
           name: Run affected:lint
-          command: yarn nx affected --target=build --base=$NX_BASE --parallel
+          command: yarn nx affected --target=build --base=HEAD~1 --parallel
       - run:
           name: Run affected:test
-          command: yarn nx affected --target=test --base=$NX_BASE --parallel
+          command: yarn nx affected --target=test --base=HEAD~1 --parallel
 
   nx-setup:
     docker:
@@ -36,7 +36,7 @@ jobs:
       - nx/set-shas
       - run:
           name: Run continue-parameters generator
-          command: npx nx print-affected --base=$NX_BASE --head=$NX_HEAD --select=projects | npx nx workspace-generator continue-parameters
+          command: npx nx print-affected --base=HEAD~1 --head=$NX_HEAD --select=projects | npx nx workspace-generator continue-parameters
       - continuation/continue:
           configuration_path: .circleci/config.continue.yml
           parameters: tmp/continue-parameters.json
