@@ -18,11 +18,11 @@ export function buildMatrix(projects: string[], tree: Tree): BuildMatrix {
     .filter((name) => name && !name.includes('-e2e'))
     .map((name) => readProjectConfiguration(tree, name))
     .reduce((acc, { name, root, targets }) => {
-      const bundleIosTarget = targets?.['bundle-ios'];
-      const exportTarget = targets?.['export'];
-      const target = bundleIosTarget
+      const hasBundleIosTarget = targets?.['bundle-ios'];
+      const hasExportTarget = targets?.['export'];
+      const target = hasBundleIosTarget
         ? 'bundle-ios'
-        : exportTarget
+        : hasExportTarget
         ? 'export'
         : 'build';
 
@@ -32,7 +32,7 @@ export function buildMatrix(projects: string[], tree: Tree): BuildMatrix {
           buildArtifactName: name?.replace(/-/gi, '_'),
           buildCommand: `npx nx run ${name}:${target}`,
           buildTagCommand: `npx nx run ${name}:add-build-tag`,
-          image: bundleIosTarget ? 'macos-latest' : 'ubuntu-latest',
+          image: hasBundleIosTarget ? 'macos-latest' : 'ubuntu-latest',
           name,
           root,
         },
